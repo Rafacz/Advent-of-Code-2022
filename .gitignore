@@ -1,0 +1,11 @@
+/node_modules
+/bin
+.cards.json
+bin
+obj
+packages
+**/.vscode/
+.vscode/
+*.crt
+*.key
+*.vs
