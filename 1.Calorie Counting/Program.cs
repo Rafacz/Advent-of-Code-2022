@@ -1,12 +1,21 @@
-﻿namespace _1.Calorie_Counting
+﻿using System.Diagnostics;
+
+namespace _1.Calorie_Counting
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
+			var timer = new Stopwatch();
+			timer.Start();
+
 			var input = Directory.GetCurrentDirectory() + @"\input.txt";
 			Console.WriteLine(Part1(input));
 			Console.WriteLine(Part2(input));
+
+			timer.Stop();
+
+			Console.WriteLine("\n\nExecution time " + timer.ElapsedMilliseconds + "ms");
 			Console.ReadLine();
 		}
 
@@ -18,7 +27,7 @@
 			{
 				int buffer = 0;
 				string line = String.Empty;
-				while ((line = sr.ReadLine()) is not null)
+				while ((line = sr.ReadLine()!) is not null)
 				{
 					if (line != "")
 					{
@@ -47,7 +56,7 @@
 			{
 				int buffer = 0;
 				string line = String.Empty;
-				while ((line = sr.ReadLine()) is not null)
+				while ((line = sr.ReadLine()!) is not null)
 				{
 					if (line != "")
 					{
