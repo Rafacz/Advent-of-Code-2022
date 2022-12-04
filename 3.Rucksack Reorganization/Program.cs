@@ -48,7 +48,6 @@ namespace _3.Rucksack_Reorganization
 			int output = 0;
 			using (StreamReader sr = new StreamReader(input))
 			{
-				int counter = 0;
 				string line = String.Empty;
 				while ((line = sr.ReadLine()!) is not null)
 				{
